@@ -1,9 +1,9 @@
 let katzDeliLine = [];
 
-function takeANumber(katzDeliLine, newCustomer){ 
+function takeANumber(katzDeliLine){ 
   let placeInLine = katzDeliLine.length + 1;
   let welcomeMessage = "Welcome, " + newCustomer + ". You are number " + placeInLine + " in line."; 
-  katzDeliLine.push(newCustomer);
+  katzDeliLine.push("addPerson");
   return welcomeMessage;
 }
 
@@ -12,9 +12,9 @@ function nowServing(katzDeliLine) {
   return 'There is nobody waiting to be served!'
   
   else {
-  let currentlyServing = katzDeliLine[0];
-  katzDeliLine.splice(0, 1); //taking array from position 0 to position 1.
-  return "Currently serving " + currentlyServing + ".";
+  let currentlyServing = katzDeliLine[0]; // def variable currentlyServing to 1st person 
+  katzDeliLine.splice(0, 1); //Deletes the first person in the line (from index 0) SWITCH TO SHIFT
+  return `Currently serving ${currentlyServing}.`; // 
   }
 }
 
